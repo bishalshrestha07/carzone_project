@@ -23,6 +23,7 @@ LOGIN_REDIRECT_URL = 'dashboard'
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
+    'contact.apps.ContactConfig',
     'accounts.apps.AccountsConfig',
     'cars.apps.CarsConfig',
     'django.contrib.admin',
@@ -144,6 +145,14 @@ MESSAGE_TAGS = {
 }
 
 SITE_ID = 1
+
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'biscro7@gmail.com'
+EMAIL_HOST_PASSWORD = 'littlelaure'
+EMAIL_USE_TLS = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
